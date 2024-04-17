@@ -12,8 +12,8 @@
  */
 
 // Your code goes here...
+const allItems = document.querySelector('.items')
 
-test mobile pull
 
 /**
  * @task
