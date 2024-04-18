@@ -12,7 +12,7 @@
  */
 
 // Your code goes here...
-const allItems = document.querySelector('.items')
+const allItems = document.querySelector('.item');
 
 
 /**
@@ -23,7 +23,7 @@ const allItems = document.querySelector('.items')
  * */
 
 // Your code goes here
-
+const main = document.getElementById('main');
 
 
 /**
@@ -34,7 +34,7 @@ const allItems = document.querySelector('.items')
  */
 
 // Your code goes here
-
+const favs = document.getElementById('favs');
 
 
 /**
