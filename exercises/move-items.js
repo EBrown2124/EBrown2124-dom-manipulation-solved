@@ -47,6 +47,10 @@ const favs = document.getElementById('favs');
  */
 
 // Your code goes here
+function updateCollections(id, direction){
+  
+}  
+
 
 
 
@@ -65,5 +69,3 @@ const favs = document.getElementById('favs');
  */
 
 // Your code goes here...
-
-
