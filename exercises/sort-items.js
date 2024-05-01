@@ -12,6 +12,7 @@
  */
 
 // Your code goes here...
+const allItems = document.querySelectorAll('.item');
 
 
 
@@ -23,7 +24,7 @@
  */
 
 // Your code goes here...
-
+const sortBtn = document.getElementsByClassName('sortBtn');
 
 
 /**
@@ -50,5 +51,5 @@
  */
 
 // Your code goes here...
-
+allItems.forEach((item) => item.addEventListener('click',))
 
