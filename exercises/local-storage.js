@@ -11,6 +11,8 @@
  * Event delegation MUST be used
  */
 
+
+
 /**
  * @task
  * Implement the 'click' event that solves several tasks by the item click:
@@ -22,6 +24,9 @@
  * * * Add the item's id to the local storage
  * * Make all the items that are listed in the favorites LS save the red background color when the page is reloaded
  */
+
+// Your code goes here...
+
 
 /**
  * @hint
@@ -37,4 +42,40 @@
  * * add the event listener to the container, pass the callback.
  */
 
-// Your code goes here...
+// // Your code goes here...
+const cards = document.querySelector('.cardsContainer');
+const favs = [];
+const favsLS = localStorage.getItem('favs');
+const favsArr = JSON.parse(favsLS);
+
+
+function setColor(card) {
+  const item = card.target;
+  if (Array.from(item.classList).includes('card')) {
+    if (item.dataset.fav === 'false') {
+      // set background color to red & set dataset to true
+      item.style.backgroundColor = 'red';
+      item.dataset.fav = 'true';
+      // add item id to local storage
+      favs.push(item.id);
+      localStorage.setItem('favs', JSON.stringify(favs));
+  }else if (item.dataset.fav === 'true') {
+    // set background color to white & set dataset to false
+    item.style.backgroundColor = 'white';
+    item.dataset.fav = 'false'; 
+    // remove item id from local storage
+    favs.splice(favs.indexOf(item.id), 1);
+    localStorage.setItem('favs', JSON.stringify(favs));
+  }
+  }
+}
+
+// set background color to red & set dataset to true
+favsArr.forEach((id) => {
+  const item = document.getElementById(id);
+  item.style.backgroundColor = 'red';
+  item.dataset.fav = 'true';
+  favs.push(item.id);
+});
+
+cards.addEventListener('click',setColor);

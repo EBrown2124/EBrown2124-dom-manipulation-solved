@@ -48,7 +48,6 @@ const favs = document.getElementById('favs');
 
 // Your code goes here
 function updateCollections(id, direction){
-
   const item = document.getElementById(`${id}`);
   const currentParent = (direction === 'toMain') ? favs : main;
   const newParent = (direction === 'toFavs') ? favs : main;
