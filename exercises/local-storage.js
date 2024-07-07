@@ -46,9 +46,10 @@
 const cards = document.querySelector('.cardsContainer');
 const favs = [];
 const favsLS = localStorage.getItem('favs');
-const favsArr = JSON.parse(favsLS);
+const favsArr = favsLS ? JSON.parse(favsLS): [];
 
 
+// set background color to red & set dataset to true
 function setColor(card) {
   const item = card.target;
   if (Array.from(item.classList).includes('card')) {
